@@ -1,3 +1,6 @@
 .DS_Store
 !*.cpp
 .vscode
+
+# executable
+./out
