@@ -1,14 +1,13 @@
 #include <iostream>
-#include <iomanip>
+
+/*
+  Combinaison de 2 chiffres:
+  Programme qui affiche toutes les différentes combinaisons possibles de trois chiffres dans l’ordre croissant, dans l’ordre croissant.
+
+  ex: 00 01, 00 02, 00 03, 00 04, ... , 00 99, 01 02, ... , 97 99, 98 99
+*/
 
 using namespace std;
-
-void print(int num){
-  if(num<10) {
-    cout << "0";
-  }
-  cout << num;
-}
 
 int main(){
   int max = 9;
@@ -24,15 +23,15 @@ int main(){
           int numFirst = stoi(strFirst);
           int numSecond = stoi(strSecond);
 
-          if(numFirst != numSecond) {
-            print(i);
+          if(
+            (numFirst != numSecond) &&
+            (i <= j) && (k <= l)
+          ) {
+            cout << i;
+            cout << j;
             cout << " ";
-            print(j);
-            cout << ", ";
-
-            print(k);
-            cout << " ";
-            print(l);
+            cout << k;
+            cout << l;
             cout << ", ";
           }
              
