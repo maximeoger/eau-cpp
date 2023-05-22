@@ -15,8 +15,8 @@ void checkArgs(int argc) {
   }
 }
 
-int main(int argc, char* argv[]){
 
+int main(int argc, char* argv[]){
   try {
     checkArgs(argc);
   } catch (exception) {
@@ -24,24 +24,11 @@ int main(int argc, char* argv[]){
     return 1;
   }
 
-  vector<string> args; 
   int count =  argc-1;
   
-  for(int i=1; i<=count; i++) {
-    args.push_back(string(argv[i]));
-  }
-  
-  for(int i=args.size()-1; i>=0; i--) {   
-    string arg = string(args[i]);
-    int len = arg.size(), j = 0;
-    char arr[len];
-
-    while (arr[j] != "\0") {
-      
-    }
+  for(int i=count; i>=1; i--) {
+    cout << string(argv[i]) << "\n";
   }
 
-  cout << "\n";
-  
   return 0;
 }
