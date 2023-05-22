@@ -4,3 +4,6 @@
 
 # executable
 ./out
+
+# misc
+./split.cpp
