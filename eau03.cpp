@@ -3,6 +3,11 @@
 
 using namespace std;
 
+/*
+  Paramètres à l'envers:
+  Programme qui affiche les paramètres reçus à l'envers.
+*/
+
 void printErr(string message) {
   cerr << message << "\n";
 }
