@@ -2,6 +2,11 @@
 
 using namespace std;
 
+/*
+  Suite de Fibonacci:
+  Programme qui affiche la position sur la suite de Fibonacci de l'argument passé en paramètre.
+*/
+
 bool isNumber(string str) {
   for(int i=0; i<str.length(); i++) {
     if(isdigit(str[i]) == false) {
@@ -18,7 +23,7 @@ void checkArgs(int argc, char* argv[]) {
   }
 
   bool moreThanOneArgument = argc > 2;
-  bool argumentIsNegativeOrNotInteger = false == isNumber(string(argv[1]));
+  bool argumentIsNegativeOrNotInteger = isNumber(string(argv[1])) == false;
 
   if(argumentIsNegativeOrNotInteger) {
     throw invalid_argument("Veuillez entrer un nombre entier.");
@@ -37,6 +42,7 @@ int main (int argc, char* argv[]) {
 
     if(input == 0) {
       cout << 1 << "\n";
+      return 0;
     }
 
     int _temp, 
@@ -53,8 +59,8 @@ int main (int argc, char* argv[]) {
       last = _temp;
       i++;
     }
-
-    if(input!=current) {
+    
+    if(input !=0 && input!=current) {
       throw invalid_argument("Le paramètre d\'entrée n'appartiens pas à la suite de Fibonacci.");
     }
 
