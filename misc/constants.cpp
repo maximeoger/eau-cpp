@@ -1,0 +1,10 @@
+#include<iostream>
+
+using namespace std;
+
+string IS_NUMBER = "IS_NUMBER";
+string IS_PRIME_NUMBER = "IS_PRIME_NUMBER";
+string ONLY_ONE_ARGUMENT = "ONLY_ONE_ARGUMENT";
+string ONLY_TWO_ARGUMENTS = "ONLY_TWO_ARGUMENTS";
+string AT_LEAST_ONE_ARGUMENT = "AT_LEAST_ONE_ARGUMENT";
+string ONLY_STRINGS = "ONLY_STRINGS";
