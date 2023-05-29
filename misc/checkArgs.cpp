@@ -48,6 +48,15 @@ void checkArgs(int argc, char* argv[], vector<string> checks) {
       }
     }
 
+    // only integers
+    if(check == ONLY_INTEGERS) {
+      for(int j=1; j<=argc-1; j++) {
+        if(false == isNumber(argv[j])) {
+          throw invalid_argument("Veuillez entrer que des entiers.");
+        }
+      }
+    }
+
     // Only two arguments
     if(check == ONLY_TWO_ARGUMENTS) {
       if(argc != 3) {
