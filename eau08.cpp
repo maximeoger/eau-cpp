@@ -4,8 +4,8 @@
 using namespace std;
 
 /*
-  Une majuscule sur deux:
-  Programme qui met en majuscule une lettre sur deux d’une chaîne de caractères. 
+  Majuscule:
+  Programme qui met en majuscule la première lettre de chaque mot d’une chaîne de caractères. 
 */
 
 
