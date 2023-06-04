@@ -39,6 +39,13 @@ void checkArgs(int argc, char* argv[], vector<string> checks) {
       }
     }
 
+    // At least two argument 
+    if(check == AT_LEAST_TWO_ARGUMENTS) {
+      if(argc <= 2) {
+        throw invalid_argument("Veuillez entrer au moins deux arguments.");
+      }
+    }
+
     // Only strings allowed
     if(check == ONLY_STRINGS) {
       for(int j=1; j<=argc-1; j++) {
