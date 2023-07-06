@@ -14,6 +14,7 @@ bool isPrimeNumber(int num) {
 
 bool isNumber(string str) {
   for(int i=0; i<str.length(); i++) {
+    if(i == 0 && str[i] == '-') continue;
     if(isdigit(str[i]) == false) {
       return false;
     }
