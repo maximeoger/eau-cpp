@@ -19,34 +19,27 @@ int main(int argc, char* argv[]){
   try {
     checkArgs(argc, argv, checks);
 
-    vector<int> arr; 
+    vector<int> arr;
 
     for(int i=1; i<argc; i++) {
       arr.push_back(atoi(argv[i]));
     }
-
     
-    for(int i=arr.size()-1; i>1; i--) {
-      bool sorted = true;
-      for(int j=0; j<i-1; j--) {
+    for(int i=arr.size()-1; i>=1; i--) {
+      for(int j=0; j<=i-1; j++) {
         int next = arr[j+1];
         int current = arr[j];
-
         if(next < current) {
           arr[j+1] = current;
           arr[j] = next;
-          sorted = false;
         }
       }
-      if(sorted == true) break;
     }
     
 
     for(int i=0; i<arr.size(); i++) {
       cout << arr[i] << " ";
     }
-
-    // [1]    2584 segmentation fault  ./out 6 5 4 3 2 1
 
   } catch(const invalid_argument& e) {
     cerr << "erreur: " << e.what() << endl;
